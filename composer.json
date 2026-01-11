@@ -60,10 +60,10 @@
         },
         "laravel": {
             "providers": [
-                "Laravolt\\Indonesia\\ServiceProvider"
+                "Almahali\\Indonesia\\ServiceProvider"
             ],
             "aliases": {
-                "Indonesia": "Laravolt\\Indonesia\\Facade"
+                "Indonesia": "Almahali\\Indonesia\\Facade"
             }
         }
     }
