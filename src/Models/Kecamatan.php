@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Models;
+namespace Almahali\Indonesia\Models;
 
 class Kecamatan extends District
 {

@@ -1,6 +1,5 @@
-[![StyleCI](https://github.styleci.io/repos/63410706/shield?branch=master)](https://github.styleci.io/repos/63410706)
-[![Build Status](https://travis-ci.org/laravolt/indonesia.svg?branch=master)](https://travis-ci.org/laravolt/indonesia)
-[![Coverage Status](https://coveralls.io/repos/github/laravolt/indonesia/badge.svg?branch=master)](https://coveralls.io/github/laravolt/indonesia?branch=master)
+> [!IMPORTANT]
+> Project ini adalah project yang di copy dari https://github.com/laravolt/indonesia dan dikembangkan secara pribadi untuk keperluan pribadi.
 
 # LARAVOLT INDONESIA
 
@@ -24,7 +23,7 @@ Tambahkan Service Provider dan Facade pada `config.app`
 ```php
 'providers' => [
 
-    Laravolt\Indonesia\ServiceProvider::class
+    Almahali\Indonesia\ServiceProvider::class
 
 ]
 ```
@@ -32,7 +31,7 @@ Tambahkan Service Provider dan Facade pada `config.app`
 ```php
 'aliases' => [
 
-    'Indonesia' => Laravolt\Indonesia\Facade::class
+    'Indonesia' => Almahali\Indonesia\Facade::class
 
 ]
 ```
@@ -49,11 +48,11 @@ $app->withEloquent();
 Dalam file `bootstrap/app.php`, daftarkan service provider dan alias/facade dengan menambahkan kode berikut.
 
 ```php
-$app->register(Laravolt\Indonesia\ServiceProvider::class);
+$app->register(Almahali\Indonesia\ServiceProvider::class);
 
 
 // class aliases
-class_alias(Laravolt\Indonesia\Facade::class, 'Indonesia');
+class_alias(Almahali\Indonesia\Facade::class, 'Indonesia');
 ```
 
 Untuk mengatur prefix tabel, buat file `config/laravolt.php`, lalu copy kode berikut (ganti `indonesia_` dengan nilai prefix tabel yang diinginkan),
@@ -82,7 +81,7 @@ Jika Anda menggunakan Laravel/Lumen versi 5.3 ke atas, abaikan langkah di bawah 
 Untuk Laravel:
 
 ```php
-php artisan vendor:publish --provider="Laravolt\Indonesia\ServiceProvider"
+php artisan vendor:publish --provider="Almahali\Indonesia\ServiceProvider"
 ```
 
 Untuk Lumen, file migrations harus di-copy manual dari direktori `vendor/laravolt/indonesia/database/migrations` atau [Migrations](database/migrations/)
@@ -105,10 +104,10 @@ php artisan laravolt:indonesia:seed
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Laravolt\Indonesia\Seeds\CitiesSeeder;
-use Laravolt\Indonesia\Seeds\VillagesSeeder;
-use Laravolt\Indonesia\Seeds\DistrictsSeeder;
-use Laravolt\Indonesia\Seeds\ProvincesSeeder;
+use Almahali\Indonesia\Seeds\CitiesSeeder;
+use Almahali\Indonesia\Seeds\VillagesSeeder;
+use Almahali\Indonesia\Seeds\DistrictsSeeder;
+use Almahali\Indonesia\Seeds\ProvincesSeeder;
 
 class DatabaseSeeder extends Seeder
 {

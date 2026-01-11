@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Http\Requests\Kecamatan;
+namespace Almahali\Indonesia\Http\Requests\Kecamatan;
 
 class Update extends Store
 {

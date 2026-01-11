@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Test;
+namespace Almahali\Indonesia\Test;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -8,20 +8,20 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         parent::setUp();
 
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            \Laravolt\Indonesia\ServiceProvider::class,
+            \Almahali\Indonesia\ServiceProvider::class,
         ];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'Indonesia' => \Laravolt\Indonesia\Facade::class,
+            'Indonesia' => \Almahali\Indonesia\Facade::class,
         ];
     }
 

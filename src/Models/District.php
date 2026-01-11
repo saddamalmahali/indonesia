@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Models;
+namespace Almahali\Indonesia\Models;
 
 class District extends Model
 {
@@ -10,12 +10,12 @@ class District extends Model
 
     public function city()
     {
-        return $this->belongsTo('Laravolt\Indonesia\Models\City', 'city_code', 'code');
+        return $this->belongsTo('Almahali\Indonesia\Models\City', 'city_code', 'code');
     }
 
     public function villages()
     {
-        return $this->hasMany('Laravolt\Indonesia\Models\Village', 'district_code', 'code');
+        return $this->hasMany('Almahali\Indonesia\Models\Village', 'district_code', 'code');
     }
 
     public function getCityNameAttribute()

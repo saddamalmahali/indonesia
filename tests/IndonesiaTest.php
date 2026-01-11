@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Test;
+namespace Almahali\Indonesia\Test;
 
 use Illuminate\Foundation\Testing\Concerns\InteractsWithDatabase;
 use Illuminate\Support\Facades\Cache;
@@ -96,7 +96,7 @@ class IndonesiaTest extends TestCase
         $this->artisan('laravolt:indonesia:seed');
 
         // Test that service can be configured with different TTL
-        $service = new \Laravolt\Indonesia\IndonesiaService(7200); // 2 hours
+        $service = new \Almahali\Indonesia\IndonesiaService(7200); // 2 hours
         $provinces = $service->allProvinces();
 
         $this->assertNotEmpty($provinces);

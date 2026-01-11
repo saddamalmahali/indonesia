@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravolt\Indonesia\Tables;
+namespace Almahali\Indonesia\Tables;
 
-use Laravolt\Suitable\Columns\Numbering;
+use Almahali\Suitable\Columns\Numbering;
 
-class KabupatenTable extends \Laravolt\Suitable\TableView
+class KabupatenTable extends \Almahali\Suitable\TableView
 {
     protected function columns()
     {

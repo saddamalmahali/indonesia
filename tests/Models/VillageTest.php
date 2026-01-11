@@ -1,18 +1,18 @@
 <?php
 
-namespace Laravolt\Indonesia\Test\Models;
+namespace Almahali\Indonesia\Test\Models;
 
-use Laravolt\Indonesia\Models\District;
-use Laravolt\Indonesia\Models\Village;
-use Laravolt\Indonesia\Test\TestCase;
+use Almahali\Indonesia\Models\District;
+use Almahali\Indonesia\Models\Village;
+use Almahali\Indonesia\Test\TestCase;
 
 class VillageTest extends TestCase
 {
     /** @test */
     public function a_village_has_belongs_to_distict_relation()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\DistrictsSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\VillagesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\DistrictsSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\VillagesSeeder');
 
         $village = Village::first();
 
@@ -23,7 +23,7 @@ class VillageTest extends TestCase
     /** @test */
     public function a_village_has_name_attribute()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\VillagesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\VillagesSeeder');
 
         $village = Village::first();
 
@@ -33,8 +33,8 @@ class VillageTest extends TestCase
     /** @test */
     public function a_village_has_district_name_attribute()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\DistrictsSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\VillagesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\DistrictsSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\VillagesSeeder');
 
         $village = Village::first();
 
@@ -44,9 +44,9 @@ class VillageTest extends TestCase
     /** @test */
     public function a_village_has_city_name_attribute()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\CitiesSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\DistrictsSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\VillagesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\CitiesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\DistrictsSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\VillagesSeeder');
 
         $village = Village::first();
 
@@ -56,10 +56,10 @@ class VillageTest extends TestCase
     /** @test */
     public function a_village_has_province_name_attribute()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\ProvincesSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\CitiesSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\DistrictsSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\VillagesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\ProvincesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\CitiesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\DistrictsSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\VillagesSeeder');
 
         $village = Village::first();
 
@@ -69,7 +69,7 @@ class VillageTest extends TestCase
     /** @test */
     public function a_village_can_store_meta_column()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\VillagesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\VillagesSeeder');
 
         $village = Village::first();
         $village->meta = ['luas_wilayah' => 200.2];

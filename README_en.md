@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This project is a fork of https://github.com/laravolt/indonesia and is developed personally for personal use.
+
 # LARAVOLT INDONESIA
 
 Laravel Package that contains Provinces Data, City/Districts, and Villages in Indonesia.
@@ -16,7 +19,7 @@ Add Facade and Service Provider in `config/app.php`
 ```
 'providers' => [
 
-    Laravolt\Indonesia\ServiceProvider::class
+    Almahali\Indonesia\ServiceProvider::class
 
 ]
 ```
@@ -24,7 +27,7 @@ Add Facade and Service Provider in `config/app.php`
 ```
 'aliases' => [
 
-    'Indonesia' => Laravolt\Indonesia\Facade::class
+    'Indonesia' => Almahali\Indonesia\Facade::class
 
 ]
 ```
@@ -32,7 +35,7 @@ Add Facade and Service Provider in `config/app.php`
 ### Publish Migration (Only for Laravel 5.2)
 If you are using Laravel version 5.3+, you can ignore this step.
 ```
-php artisan vendor:publish --provider="Laravolt\Indonesia\ServiceProvider"
+php artisan vendor:publish --provider="Almahali\Indonesia\ServiceProvider"
 ```
 
 ### Run Migration

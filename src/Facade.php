@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia;
+namespace Almahali\Indonesia;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;
 

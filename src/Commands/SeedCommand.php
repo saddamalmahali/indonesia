@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Commands;
+namespace Almahali\Indonesia\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
@@ -38,7 +38,7 @@ class SeedCommand extends Command
      */
     public function handle()
     {
-        Artisan::call('db:seed', ['--class' => 'Laravolt\Indonesia\Seeds\DatabaseSeeder', '--force' => true]);
-        $this->info('Seeded: Laravolt\Indonesia\Seeds\IndonesiaSeeder');
+        Artisan::call('db:seed', ['--class' => 'Almahali\Indonesia\Seeds\DatabaseSeeder', '--force' => true]);
+        $this->info('Seeded: Almahali\Indonesia\Seeds\IndonesiaSeeder');
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravolt\Indonesia\Http\Requests\Provinsi;
+namespace Almahali\Indonesia\Http\Requests\Provinsi;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use Laravolt\Indonesia\Models\Provinsi;
+use Almahali\Indonesia\Models\Provinsi;
 
 class Store extends FormRequest
 {

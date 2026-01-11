@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia;
+namespace Almahali\Indonesia;
 
 use Illuminate\Support\Facades\Cache;
 
@@ -38,14 +38,14 @@ class IndonesiaService
 
     private function getCacheKey($method, $params = [])
     {
-        $key = $this->cachePrefix.':'.$method;
+        $key = $this->cachePrefix . ':' . $method;
 
         if ($this->search) {
-            $key .= ':search:'.$this->search;
+            $key .= ':search:' . $this->search;
         }
 
         if (!empty($params)) {
-            $key .= ':'.md5(serialize($params));
+            $key .= ':' . md5(serialize($params));
         }
 
         return $key;
@@ -273,7 +273,7 @@ class IndonesiaService
 
     public function clearCache()
     {
-        $pattern = $this->cachePrefix.':*';
+        $pattern = $this->cachePrefix . ':*';
 
         // If using Redis
         if (config('cache.default') === 'redis') {
@@ -327,13 +327,15 @@ class IndonesiaService
 
         // https://softonsofa.com/laravel-querying-any-level-far-relations-with-simple-trick/
         // because Eloquent hasManyThrough cannot get through more than one deep relationship
-        $object->load([$relation => function ($q) use (&$createdValue, $belongsTo) {
-            if ($belongsTo) {
-                $createdValue = $q->first();
-            } else {
-                $createdValue = $q->get()->unique();
+        $object->load([
+            $relation => function ($q) use (&$createdValue, $belongsTo) {
+                if ($belongsTo) {
+                    $createdValue = $q->first();
+                } else {
+                    $createdValue = $q->get()->unique();
+                }
             }
-        }]);
+        ]);
 
         $newObject[$targetRelationName] = $createdValue;
 

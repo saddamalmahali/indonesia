@@ -1,14 +1,14 @@
 <?php
 
-namespace Laravolt\Indonesia;
+namespace Almahali\Indonesia;
 
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Illuminate\Support\Str;
-use Laravolt\Indonesia\Commands\SeedCommand;
-use Laravolt\Indonesia\Commands\SyncCoordinateCommand;
+use Almahali\Indonesia\Commands\SeedCommand;
+use Almahali\Indonesia\Commands\SyncCoordinateCommand;
 
 class ServiceProvider extends BaseServiceProvider
 {
@@ -32,9 +32,9 @@ class ServiceProvider extends BaseServiceProvider
     */
     public function boot()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/indonesia.php', 'laravolt.indonesia');
+        $this->mergeConfigFrom(__DIR__ . '/../config/indonesia.php', 'laravolt.indonesia');
 
-        $databasePath = __DIR__.'/../database/migrations';
+        $databasePath = __DIR__ . '/../database/migrations';
         if ($this->isLumen()) {
             $this->loadMigrationsFrom($databasePath);
         } else {
@@ -44,13 +44,13 @@ class ServiceProvider extends BaseServiceProvider
         if (class_exists(Application::class)) {
             $this->publishes(
                 [
-                    __DIR__.'/../config/indonesia.php' => config_path('laravolt/indonesia.php'),
+                    __DIR__ . '/../config/indonesia.php' => config_path('laravolt/indonesia.php'),
                 ],
                 'config'
             );
         }
 
-        $this->loadViewsFrom(realpath(__DIR__.'/../resources/views'), 'indonesia');
+        $this->loadViewsFrom(realpath(__DIR__ . '/../resources/views'), 'indonesia');
 
         if (config('laravolt.indonesia.route.enabled')) {
             $this->registerRoutes();
@@ -74,19 +74,19 @@ class ServiceProvider extends BaseServiceProvider
             $menu->add(__('Provinsi'), route('indonesia::provinsi.index'))
                 ->data('icon', 'map')
                 ->data('permission', Permission::MANAGE_INDONESIA)
-                ->active(config('laravolt.indonesia.route.prefix').'/provinsi/*');
+                ->active(config('laravolt.indonesia.route.prefix') . '/provinsi/*');
             $menu->add(__('Kota/Kabupaten'), route('indonesia::kabupaten.index'))
                 ->data('icon', 'map marker')
                 ->data('permission', Permission::MANAGE_INDONESIA)
-                ->active(config('laravolt.indonesia.route.prefix').'/kabupaten/*');
+                ->active(config('laravolt.indonesia.route.prefix') . '/kabupaten/*');
             $menu->add(__('Kecamatan'), route('indonesia::kecamatan.index'))
                 ->data('icon', 'map marker alternate')
                 ->data('permission', Permission::MANAGE_INDONESIA)
-                ->active(config('laravolt.indonesia.route.prefix').'/kecamatan/*');
+                ->active(config('laravolt.indonesia.route.prefix') . '/kecamatan/*');
             $menu->add(__('Desa/Kelurahan'), route('indonesia::kelurahan.index'))
                 ->data('icon', 'map pin')
                 ->data('permission', Permission::MANAGE_INDONESIA)
-                ->active(config('laravolt.indonesia.route.prefix').'/kelurahan/*');
+                ->active(config('laravolt.indonesia.route.prefix') . '/kelurahan/*');
         }
     }
 
@@ -122,7 +122,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function registerRoutes()
     {
         $router = $this->app['router'];
-        require __DIR__.'/../routes/web.php';
+        require __DIR__ . '/../routes/web.php';
     }
 
     protected function isLaravel()

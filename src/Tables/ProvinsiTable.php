@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Tables;
+namespace Almahali\Indonesia\Tables;
 
 use Laravolt\Suitable\Columns\Numbering;
 

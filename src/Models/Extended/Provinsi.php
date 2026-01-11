@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravolt\Indonesia\Models\Extended;
+namespace Almahali\Indonesia\Models\Extended;
 
 use Laravolt\Support\Traits\AutoFilter;
 use Laravolt\Support\Traits\AutoSort;
 
-class Provinsi extends \Laravolt\Indonesia\Models\Provinsi
+class Provinsi extends \Almahali\Indonesia\Models\Provinsi
 {
     use AutoFilter;
     use AutoSort;

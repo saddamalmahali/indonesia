@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravolt\Indonesia\Http\Requests\Kabupaten;
+namespace Almahali\Indonesia\Http\Requests\Kabupaten;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use Laravolt\Indonesia\Models\Kabupaten;
+use Almahali\Indonesia\Models\Kabupaten;
 
 class Store extends FormRequest
 {

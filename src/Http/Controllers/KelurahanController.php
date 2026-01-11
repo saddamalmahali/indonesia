@@ -1,13 +1,13 @@
 <?php
 
-namespace Laravolt\Indonesia\Http\Controllers;
+namespace Almahali\Indonesia\Http\Controllers;
 
 use Illuminate\Database\QueryException;
 use Illuminate\Routing\Controller;
-use Laravolt\Indonesia\Http\Requests\Kelurahan\Store;
-use Laravolt\Indonesia\Http\Requests\Kelurahan\Update;
-use Laravolt\Indonesia\Models\Extended\Kelurahan;
-use Laravolt\Indonesia\Tables\KelurahanTable;
+use Almahali\Indonesia\Http\Requests\Kelurahan\Store;
+use Almahali\Indonesia\Http\Requests\Kelurahan\Update;
+use Almahali\Indonesia\Models\Extended\Kelurahan;
+use Almahali\Indonesia\Tables\KelurahanTable;
 
 class KelurahanController extends Controller
 {

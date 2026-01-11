@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Seeds;
+namespace Almahali\Indonesia\Seeds;
 
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
@@ -12,10 +12,11 @@ class CitiesSeeder extends Seeder
     {
         $now = Carbon::now();
         $Csv = new CsvtoArray();
-        $file = __DIR__.'/../../resources/csv/cities.csv';
+        $file = __DIR__ . '/../../resources/csv/cities.csv';
         $header = ['code', 'province_code', 'name', 'lat', 'long'];
         $data = $Csv->csv_to_array($file, $header);
         $data = array_map(function ($arr) use ($now) {
+            $arr['code'] = str_replace(' ', '', trim($arr['code']));
             $arr['meta'] = json_encode(['lat' => $arr['lat'], 'long' => $arr['long']]);
             unset($arr['lat'], $arr['long']);
 
@@ -24,7 +25,7 @@ class CitiesSeeder extends Seeder
 
         $collection = collect($data);
         foreach ($collection->chunk(50) as $chunk) {
-            DB::table(config('laravolt.indonesia.table_prefix').'cities')->insertOrIgnore($chunk->toArray());
+            DB::table(config('laravolt.indonesia.table_prefix') . 'cities')->insertOrIgnore($chunk->toArray());
         }
     }
 }

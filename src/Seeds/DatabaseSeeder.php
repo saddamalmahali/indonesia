@@ -1,13 +1,13 @@
 <?php
 
-namespace Laravolt\Indonesia\Seeds;
+namespace Almahali\Indonesia\Seeds;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
-use Laravolt\Indonesia\Models\Kabupaten;
-use Laravolt\Indonesia\Models\Kecamatan;
-use Laravolt\Indonesia\Models\Kelurahan;
-use Laravolt\Indonesia\Models\Provinsi;
+use Almahali\Indonesia\Models\Kabupaten;
+use Almahali\Indonesia\Models\Kecamatan;
+use Almahali\Indonesia\Models\Kelurahan;
+use Almahali\Indonesia\Models\Provinsi;
 
 class DatabaseSeeder extends Seeder
 {

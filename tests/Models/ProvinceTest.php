@@ -1,20 +1,20 @@
 <?php
 
-namespace Laravolt\Indonesia\Test\Models;
+namespace Almahali\Indonesia\Test\Models;
 
 use Illuminate\Database\Eloquent\Collection;
-use Laravolt\Indonesia\Models\City;
-use Laravolt\Indonesia\Models\District;
-use Laravolt\Indonesia\Models\Province;
-use Laravolt\Indonesia\Test\TestCase;
+use Almahali\Indonesia\Models\City;
+use Almahali\Indonesia\Models\District;
+use Almahali\Indonesia\Models\Province;
+use Almahali\Indonesia\Test\TestCase;
 
 class ProvinceTest extends TestCase
 {
     /** @test */
     public function a_province_has_many_cities_relation()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\ProvincesSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\CitiesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\ProvincesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\CitiesSeeder');
 
         $province = Province::first();
 
@@ -25,9 +25,9 @@ class ProvinceTest extends TestCase
     /** @test */
     public function a_province_has_many_districts_relation()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\ProvincesSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\CitiesSeeder');
-        $this->seed('Laravolt\Indonesia\Seeds\DistrictsSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\ProvincesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\CitiesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\DistrictsSeeder');
 
         $province = Province::first();
 
@@ -38,7 +38,7 @@ class ProvinceTest extends TestCase
     /** @test */
     public function a_province_has_name_attribute()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\ProvincesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\ProvincesSeeder');
 
         $province = Province::first();
 
@@ -48,7 +48,7 @@ class ProvinceTest extends TestCase
     /** @test */
     public function a_province_has_logo_path_attribute()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\ProvincesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\ProvincesSeeder');
 
         $province = Province::first();
 
@@ -58,7 +58,7 @@ class ProvinceTest extends TestCase
     /** @test */
     public function a_province_can_store_meta_column()
     {
-        $this->seed('Laravolt\Indonesia\Seeds\ProvincesSeeder');
+        $this->seed('Almahali\Indonesia\Seeds\ProvincesSeeder');
 
         $province = Province::first();
         $province->meta = ['luas_wilayah' => 200.2];

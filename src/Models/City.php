@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Models;
+namespace Almahali\Indonesia\Models;
 
 class City extends Model
 {
@@ -10,19 +10,19 @@ class City extends Model
 
     public function province()
     {
-        return $this->belongsTo('Laravolt\Indonesia\Models\Province', 'province_code', 'code');
+        return $this->belongsTo('Almahali\Indonesia\Models\Province', 'province_code', 'code');
     }
 
     public function districts()
     {
-        return $this->hasMany('Laravolt\Indonesia\Models\District', 'city_code', 'code');
+        return $this->hasMany('Almahali\Indonesia\Models\District', 'city_code', 'code');
     }
 
     public function villages()
     {
         return $this->hasManyThrough(
-            'Laravolt\Indonesia\Models\Village',
-            'Laravolt\Indonesia\Models\District',
+            'Almahali\Indonesia\Models\Village',
+            'Almahali\Indonesia\Models\District',
             'city_code',
             'district_code',
             'code',
@@ -39,12 +39,12 @@ class City extends Model
     {
         $folder = 'indonesia-logo/';
         $id = $this->getAttributeValue('id');
-        $arr_glob = glob(public_path().'/'.$folder.$id.'.*');
+        $arr_glob = glob(public_path() . '/' . $folder . $id . '.*');
 
         if (count($arr_glob) == 1) {
             $logo_name = basename($arr_glob[0]);
 
-            return url($folder.$logo_name);
+            return url($folder . $logo_name);
         }
     }
 }

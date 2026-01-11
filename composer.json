@@ -1,5 +1,5 @@
 {
-    "name": "laravolt/indonesia",
+    "name": "saddamalmahali/indonesia",
     "description": "Package Laravel yang berisi data Provinsi, Kabupaten/Kota, Kecamatan, dan Keluarahan/Desa di seluruh Indonesia.",
     "keywords": [
         "laravel",
@@ -15,26 +15,30 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Bayu Hendra Winata",
+            "name": "Bayu Hendra Winata ( Laravolt )",
             "email": "bayu.hendra@javan.co.id"
         },
         {
-            "name": "Akbar Adhatama",
+            "name": "Akbar Adhatama ( Laravolt )",
             "email": "am.adhatama@gmail.com"
         },
         {
-            "name": "Deri Ramdani",
+            "name": "Deri Ramdani ( Laravolt )",
             "email": "deri.ramdani1@gmail.com"
+        },
+        {
+            "name": "Saddam Almahali",
+            "email": "saddam.almahali@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Laravolt\\Indonesia\\": "src/"
+            "Almahali\\Indonesia\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Laravolt\\Indonesia\\Test\\": "tests/"
+            "Almahali\\Indonesia\\Test\\": "tests/"
         }
     },
     "require": {

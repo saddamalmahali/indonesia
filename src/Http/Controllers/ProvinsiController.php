@@ -1,13 +1,13 @@
 <?php
 
-namespace Laravolt\Indonesia\Http\Controllers;
+namespace Almahali\Indonesia\Http\Controllers;
 
 use Illuminate\Database\QueryException;
 use Illuminate\Routing\Controller;
-use Laravolt\Indonesia\Http\Requests\Provinsi\Store;
-use Laravolt\Indonesia\Http\Requests\Provinsi\Update;
-use Laravolt\Indonesia\Models\Extended\Provinsi;
-use Laravolt\Indonesia\Tables\ProvinsiTable;
+use Almahali\Indonesia\Http\Requests\Provinsi\Store;
+use Almahali\Indonesia\Http\Requests\Provinsi\Update;
+use Almahali\Indonesia\Models\Extended\Provinsi;
+use Almahali\Indonesia\Tables\ProvinsiTable;
 
 class ProvinsiController extends Controller
 {

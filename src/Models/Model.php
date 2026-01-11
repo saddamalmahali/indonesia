@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Models;
+namespace Almahali\Indonesia\Models;
 
 class Model extends \Illuminate\Database\Eloquent\Model
 {
@@ -32,7 +32,7 @@ class Model extends \Illuminate\Database\Eloquent\Model
             return $table;
         }
 
-        return $prefix.$table;
+        return $prefix . $table;
     }
 
     public function scopeSearch($query, $keyword)

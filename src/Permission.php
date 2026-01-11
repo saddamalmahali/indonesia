@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia;
+namespace Almahali\Indonesia;
 
 final class Permission
 {

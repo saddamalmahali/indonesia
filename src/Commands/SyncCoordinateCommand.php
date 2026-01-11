@@ -1,13 +1,13 @@
 <?php
 
-namespace Laravolt\Indonesia\Commands;
+namespace Almahali\Indonesia\Commands;
 
 use GuzzleHttp\Exception\ServerException;
 use Illuminate\Console\Command;
-use Laravolt\Indonesia\Models\Kabupaten;
-use Laravolt\Indonesia\Models\Kecamatan;
-use Laravolt\Indonesia\Models\Kelurahan;
-use Laravolt\Indonesia\Models\Provinsi;
+use Almahali\Indonesia\Models\Kabupaten;
+use Almahali\Indonesia\Models\Kecamatan;
+use Almahali\Indonesia\Models\Kelurahan;
+use Almahali\Indonesia\Models\Provinsi;
 
 class SyncCoordinateCommand extends Command
 {

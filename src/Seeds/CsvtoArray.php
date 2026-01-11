@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Indonesia\Seeds;
+namespace Almahali\Indonesia\Seeds;
 
 class CsvtoArray
 {

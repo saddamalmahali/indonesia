@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravolt\Indonesia\Models\Extended;
+namespace Almahali\Indonesia\Models\Extended;
 
 use Laravolt\Support\Traits\AutoFilter;
 use Laravolt\Support\Traits\AutoSort;
 
-class Kabupaten extends \Laravolt\Indonesia\Models\Kabupaten
+class Kabupaten extends \Almahali\Indonesia\Models\Kabupaten
 {
     use AutoFilter;
     use AutoSort;
